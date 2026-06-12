@@ -13,21 +13,25 @@
         <h1>Custom MTG Cards</h1>
         <img id="language-select" />
     </header>
+
     <main>
         <form>
             <fieldset>
                 <legend>Select a customisation mode</legend>
+
                 <div class="mode-selector">
                     <div>
                         <label for="scryfall">Single Card from Scryfall</label>
-                        <input type="radio" id="scryfall" name="scryfall" value="scryfall" checked />
+                        <input type="radio" id="scryfall" name="mode-selector" value="scryfall" checked />
                     </div>
+
                     <div>
                         <label for="moxfield">Full Deck from Moxfield</label>
-                        <input type="radio" id="moxfield" name="moxfield" value="moxfield" />
+                        <input type="radio" id="moxfield" name="mode-selector" value="moxfield" />
                     </div>
                 </div>
             </fieldset>
+
             <div>
                 <h2 id="mode-selector-input-header"></h2>
                 <input type="text" id="mode-selector-input">
