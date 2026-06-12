@@ -17,18 +17,17 @@
         <form>
             <fieldset>
                 <legend>Select a customisation mode</legend>
+                <div class="mode-selector">
+                    <div>
+                        <label for="scryfall">Single Card from Scryfall</label>
+                        <input type="radio" id="scryfall" name="scryfall" value="scryfall" checked />
+                    </div>
+                    <div>
+                        <label for="moxfield">Full Deck from Moxfield</label>
+                        <input type="radio" id="moxfield" name="moxfield" value="moxfield" />
+                    </div>
+                </div>
             </fieldset>
-
-            <div class="mode-selector">
-                <div>
-                    <label for="scryfall">Single Card from Scryfall</label>
-                    <input type="radio" id="scryfall" name="scryfall" value="scryfall" checked />
-                </div>
-                <div>
-                    <label for="moxfield">Full Deck from Moxfield</label>
-                    <input type="radio" id="moxfield" name="moxfield" value="moxfield" />
-                </div>
-            </div>
             <div>
                 <h2 id="mode-selector-input-header"></h2>
                 <input type="text" id="mode-selector-input">
