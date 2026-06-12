@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <script src="/scripts/main.js" type="module"></script>
     <title>Custom MTG Cards</title>
 </head>
 <body>
@@ -10,6 +13,28 @@
         <h1>Custom MTG Cards</h1>
         <img id="language-select" />
     </header>
-    
+    <main>
+        <form>
+            <fieldset>
+                <legend>Select a customisation mode</legend>
+            </fieldset>
+
+            <div class="mode-selector">
+                <div>
+                    <label for="scryfall">Single Card from Scryfall</label>
+                    <input type="radio" id="scryfall" name="scryfall" value="scryfall" checked />
+                </div>
+                <div>
+                    <label for="moxfield">Full Deck from Moxfield</label>
+                    <input type="radio" id="moxfield" name="moxfield" value="moxfield" />
+                </div>
+            </div>
+            <div>
+                <h2 id="mode-selector-input-header"></h2>
+                <input type="text" id="mode-selector-input">
+                <button id="submit-selector-input-button">Search</button>
+            </div>
+        </form>
+    </main>
 </body>
 </html>
