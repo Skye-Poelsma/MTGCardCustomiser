@@ -1,0 +1,49 @@
+:root {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0.5em 1em;
+    align-items: center;
+
+}
+
+
+
+.card-or-mode-selector-form {
+    padding: 0.5em 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-content: center;
+    text-align: center;
+}
+
+
+
+.mode-selector {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.mode-selector input {
+    display: none;
+}
+
+.mode-selector label {
+    display: inline-block;
+}
+
+.mode-selector input:checked + label {
+    font-weight: bold;
+    border-bottom: 3px solid black;
+}

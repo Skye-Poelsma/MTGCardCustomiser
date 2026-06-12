@@ -19,20 +19,20 @@
     </header>
 
     <main>
-        <form>
+        <form class="card-or-mode-selector-form">
             <fieldset>
-                <legend>Select a customisation mode</legend>
+                <legend>
+                    <h3>
+                        Select a customisation mode
+                    </h3>
+                </legend>
 
                 <div class="mode-selector">
-                    <div>
-                        <label for="scryfall">Single Card from Scryfall</label>
-                        <input type="radio" id="scryfall" name="mode-selector" value="scryfall" checked />
-                    </div>
+                    <input type="radio" id="scryfall" name="mode-selector" value="scryfall" required />
+                    <label for="scryfall">Single Card from Scryfall</label>
 
-                    <div>
-                        <label for="moxfield">Full Deck from Moxfield</label>
-                        <input type="radio" id="moxfield" name="mode-selector" value="moxfield" />
-                    </div>
+                    <input type="radio" id="moxfield" name="mode-selector" value="moxfield" required />
+                    <label for="moxfield">Full Deck from Moxfield</label>
                 </div>
             </fieldset>
 
