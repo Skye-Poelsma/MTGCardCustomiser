@@ -1,0 +1,8 @@
+#card-info label:has(+ *:required):after {
+    position: relative;
+    container-type: p;
+    content:"*";
+    color: #ff4500;
+    top: 0.1em;
+    right: -0.1em;
+}

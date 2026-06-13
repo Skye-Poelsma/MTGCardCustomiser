@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/reset.css" />
     <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/required-form-fields.css" />
     <script src="/scripts/main.js" type="module"></script>
     <title>Custom MTG Cards</title>
 </head>
@@ -19,29 +20,120 @@
     </header>
 
     <main>
-        <form class="card-or-mode-selector-form">
-            <fieldset>
-                <legend>
-                    <h3>
-                        Select a customisation mode
-                    </h3>
-                </legend>
-
-                <div class="mode-selector">
-                    <input type="radio" id="scryfall" name="mode-selector" value="scryfall" required />
-                    <label for="scryfall">Single Card from Scryfall</label>
-
-                    <input type="radio" id="moxfield" name="mode-selector" value="moxfield" required />
-                    <label for="moxfield">Full Deck from Moxfield</label>
+        <section id="mode-selection">
+            <form class="card-or-mode-selector-form">
+                <fieldset>
+                    <legend>
+                        <h3>
+                            Select a customisation mode
+                        </h3>
+                    </legend>
+    
+                    <div class="mode-selector">
+                        <input type="radio" id="scryfall" name="mode-selector" value="scryfall" required />
+                        <label for="scryfall">Single Card from Scryfall</label>
+    
+                        <input type="radio" id="moxfield" name="mode-selector" value="moxfield" required />
+                        <label for="moxfield">Full Deck from Moxfield</label>
+                    </div>
+                </fieldset>
+    
+                <div>
+                    <h2 id="mode-selector-input-header"></h2>
+                    <input type="text" id="mode-selector-input">
+                    <button id="submit-selector-input-button">Search</button>
                 </div>
-            </fieldset>
+            </form>
+        </section>
 
-            <div>
-                <h2 id="mode-selector-input-header"></h2>
-                <input type="text" id="mode-selector-input">
-                <button id="submit-selector-input-button">Search</button>
+        <section id="card-info">
+            <div id="card-preview">
             </div>
-        </form>
+            <form class="card-editor">
+                <label for="card-name">Name</label>
+                <input type="text" name="card-name" required />
+
+                <label for="alias">Alias</label>
+                <input type="text" name="alias" />
+
+                <label for="card-style">Card Style</label>
+                <select name="card-style" id="card-style-select" required>
+                    <option value="fellowship">Fellowship</option>
+                    <option value="stained-glass">Stained Glass</option>
+                    <option value="sketch">Sketch</option>
+                    <option value="textless">Textless</option>
+                    <option value="gilded">Gilded</option>
+                    <option value="new-promo">New Promo</option>
+                    <option value="pop-culture">Pop Culture</option>
+                    <option value="classic">Classic</option>
+                    <option value="ninja">Ninja</option>
+                    <option value="samurai">Samurai</option>
+                    <option value="norse">Norse</option>
+                    <option value="spirit">Spirit</option>
+                    <option value="pokemon">Pokemon</option>
+                    <option value="vampire">Vampire</option>
+                    <option value="werewolf-night">Werewolf – Night</option>
+                    <option value="werewolf-day">Werewolf – Day</option>
+                    <option value="cyberpunk">Cyberpunk</option>
+                    <option value="super">Super</option>
+                    <option value="rulebook">Rulebook</option>
+                    <option value="phyrexian">Phyrexian</option>
+                    <option value="mystical">Mystical</option>
+                    <option value="hedron">Hedron</option>
+                    <option value="box-topper">Box Topper</option>
+                    <option value="commander">Commander</option>
+                    <option value="expedition">Expedition</option>
+                    <option value="expedition-2">Expedition 2</option>
+                    <option value="fnm">FNM</option>
+                    <option value="full-art">Full Art</option>
+                    <option value="full-art-promo">Full Art Promo</option>
+                    <option value="full-art-master">Full Art Master</option>
+                    <option value="invention">Invention</option>
+                    <option value="jace-spellbook">Jace Spellbook</option>
+                    <option value="m15">M15</option>
+                    <option value="map-land">Map Land</option>
+                    <option value="storybook">Storybook</option>
+                    <option value="5th-edition">5th Edition</option>
+                    <option value="alpha">Alpha</option>
+                    <option value="antiquities">Antiquities</option>
+                    <option value="arabian-nights">Arabian Nights</option>
+                    <option value="the-dark">The Dark</option>
+                    <option value="legends">Legends</option>
+                    <option value="5th-edition-promo">5th Edition Promo</option>
+                    <option value="8th-edition">8th Edition</option>
+                    <option value="m15-three-ability-plainswalker">M15 Three Ability Plainswalker</option>
+                    <option value="m15-three-ability-full-art-plainswalker">M15 Three Ability Full Art Plainswalker</option>
+                    <option value="m15-four-ability-plainswalker">M15 Four Ability Plainswalker</option>
+                    <option value="m15-four-ability-full-art-plainswalker">M15 Four Ability Full Art Plainswalker</option>
+                    <option value="m15-token-no-text">M15 Token No Text</option>
+                    <option value="m15-full-art-token-no-text">M15 Full Art Token No Text</option>
+                    <option value="m15-token-small-text-box">M15 Token Small Text Box</option>
+                    <option value="m15-token-large-text-box">M15 Token Large Text Box</option>
+                    <option value="5th-edition-token">5th Edition Token</option>
+                </select>
+
+                <label for="casting-cost">Casting Cost</label>
+                <input type="text" name="casting-cost" />
+
+                <label for="types">Type(s)</label>
+                <input type="text" name="types" />
+
+
+                <label for="rules">Rules text</label>
+                <textarea name="rules" spellcheck required></textarea>
+
+                <label for="flavour-text">Flavour text</label>
+                <textarea name="flavour-text" spellcheck></textarea>
+
+                <label for="power-toughness">P/T</label>
+                <input type="text" />
+
+                <label for="artist">Artist</label>
+                <input type="text" required />
+
+                <button id="card-editor-submit">Generate!</button>
+            </form>
+        </section>
     </main>
 </body>
 </html>
