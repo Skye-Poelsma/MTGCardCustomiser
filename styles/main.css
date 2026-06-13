@@ -3,6 +3,12 @@
 }
 
 
+@font-face {
+    font-family: MTG;
+    src: url(../assets/fonts/Matrix\ Bold.ttf);
+}
+
+
 
 header {
     display: flex;
@@ -11,10 +17,12 @@ header {
     justify-content: space-between;
     padding: 0.5em 1em;
     align-items: center;
-
 }
 
-
+h1 {
+    font-family: MTG;
+    font-size: 3.2em;
+}
 
 .card-or-mode-selector-form {
     padding: 0.5em 1em;
